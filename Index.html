@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="icon" href="img/Icon.V.png" type="image/png">
+    <title>Vitrine de Prestadores</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <h1>Vitrine</h1>
+
+    <nav>
+        <a href="usuario.html" class="profile-icon">
+             <img src="img/avatar.jpg" alt="Icone de perfil do usuário">
+        </a>
+    </nav>
+</header>
+
+<main>
+
+   <section class="filters">
+
+    <h2>Filtros</h2>
+
+    <div class="filter-grid">
+
+        <div class="filter-group">
+            <label for="distancia">Distância</label>
+
+            <select id="distancia">
+                <option>Todas</option>
+                <option>Até 1 km</option>
+                <option>Até 5 km</option>
+                <option>Até 10 km</option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label for="preco">Preço médio</label>
+
+            <select id="preco">
+                <option>Todos</option>
+                <option>Até R$ 50/h</option>
+                <option>Até R$ 100/h</option>
+                <option>Acima de R$ 100/h</option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label for="servico">Serviço</label>
+
+            <select id="servico">
+                <option>Todos</option>
+                <option>Encanador</option>
+                <option>Eletricista</option>
+                <option>Pintor</option>
+            </select>
+        </div>
+
+    </div>
+
+</section>
+
+    <section class="providers">
+
+        <article class="provider-card">
+
+            <a href="prestador.html">
+
+                <img
+                    src="img/placeholder.jpg"
+                    alt="Foto do prestador">
+
+                <div class="provider-info">
+
+                    <div class="provider-header">
+
+                        <h3>Ana Paula Silva</h3>
+
+                        <span>R$ 80/h</span>
+
+                    </div>
+
+                    <p class="profession">
+                        Eletricista Residencial
+                    </p>
+
+                    <p>
+                        Especialista em instalações
+                        elétricas residenciais e comerciais
+                        com 8 anos de experiência.
+                    </p>
+
+                    <small>1.2 km</small>
+
+                </div>
+
+            </a>
+
+        </article>
+
+    </section>
+
+</main>
+
+</body>
+</html>

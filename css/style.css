@@ -1,0 +1,718 @@
+/* =====================================================
+RESET E CONFIGURAÇÕES GLOBAIS
+Utilizado por TODAS AS TELAS
+===================================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+:root{
+/* Cores principais */
+
+--primary:#0a0a23;
+--primary-hover:#17173b;
+
+--background:#f5f6f8;
+--surface:#ffffff;
+
+--text:#222222;
+--text-secondary:#6b7280;
+
+--border:#e5e7eb;
+
+--success:#25D366;
+
+--shadow:
+    0 4px 12px rgba(0,0,0,.05);
+
+--radius-sm:12px;
+--radius-md:16px;
+--radius-lg:24px;
+
+
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:
+"Segoe UI",
+Arial,
+sans-serif;
+
+
+background:var(--background);
+
+color:var(--text);
+
+line-height:1.5;
+
+}
+
+img{
+display:block;
+width:100%;
+}
+
+a{
+color:inherit;
+text-decoration:none;
+}
+
+button{
+font-family:inherit;
+}
+
+.container{
+padding:20px;
+}
+
+/* =====================================================
+HEADER
+Utilizado em TODAS AS TELAS
+===================================================== */
+
+.topbar{
+
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+padding:20px;
+
+background:var(--surface);
+
+border-bottom:
+    1px solid var(--border);
+
+position:sticky;
+top:0;
+
+z-index:100;
+
+
+}
+
+.topbar h1{
+font-size:2rem;
+font-weight:700;
+}
+
+.profile-icon{
+font-size:1.8rem;
+}
+
+/* =====================================================
+TELA 1 - VITRINE
+===================================================== */
+
+.providers{
+padding:20px;
+}
+
+.providers{
+display:grid;
+gap:20px;
+}
+
+/* =====================================================
+FILTROS DA VITRINE
+===================================================== */
+
+.filters{
+
+
+background:var(--surface);
+
+margin:20px;
+
+padding:24px;
+
+border-radius:20px;
+
+box-shadow:var(--shadow);
+
+
+}
+
+.filters h2{
+font-size:1.4rem;
+margin-bottom:20px;
+}
+
+.filter-grid{
+display:grid;
+gap:18px;
+}
+
+.filter-group{
+display:flex;
+flex-direction:column;
+}
+
+.filter-group label{
+
+
+font-size:.95rem;
+
+font-weight:600;
+
+color:var(--text-secondary);
+
+margin-bottom:8px;
+
+
+}
+
+.filter-group select{
+
+
+width:100%;
+
+padding:14px 16px;
+
+background:#fafafa;
+
+border:1px solid var(--border);
+
+border-radius:14px;
+
+font-size:1rem;
+
+cursor:pointer;
+
+transition:.2s;
+
+
+}
+
+.filter-group select:hover
+
+.filter-group select:focus{
+
+
+outline:none;
+
+border-color:var(--primary);
+
+box-shadow:
+    0 0 0 4px rgba(10,10,35,.08);
+
+
+}
+
+/* =====================================================
+CARD DO PRESTADOR
+Tela Vitrine
+===================================================== */
+
+.provider-card{
+
+
+background:var(--surface);
+
+border-radius:20px;
+
+overflow:hidden;
+
+box-shadow:var(--shadow);
+
+transition:.3s;
+
+
+}
+
+.provider-card:hover{
+
+
+transform:translateY(-4px);
+
+box-shadow:
+    0 8px 20px rgba(0,0,0,.08);
+
+
+}
+
+.provider-card img{
+
+aspect-ratio:16/10;
+
+object-fit:cover;
+
+}
+
+.provider-info{
+padding:20px;
+}
+
+.provider-header{
+
+display:flex;
+
+justify-content:space-between;
+
+gap:15px;
+
+margin-bottom:10px;
+
+
+}
+
+.provider-header h3{
+font-size:1.2rem;
+}
+
+.provider-header span{
+
+
+font-weight:700;
+
+white-space:nowrap;
+
+
+}
+
+.profession{
+
+
+color:var(--text-secondary);
+
+margin-bottom:12px;
+
+
+}
+
+.provider-info small{
+
+
+display:block;
+
+margin-top:14px;
+
+color:var(--text-secondary);
+
+
+}
+
+/* =====================================================
+TELA 2 - PERFIL DO PRESTADOR
+===================================================== */
+
+.profile-header{
+
+
+background:var(--surface);
+
+border-radius:24px;
+
+padding:24px;
+
+margin-bottom:24px;
+
+box-shadow:var(--shadow);
+
+
+}
+
+.profile-header h1{
+
+
+font-size:2rem;
+
+margin-bottom:6px;
+
+
+}
+
+.rating{
+
+
+display:flex;
+
+flex-wrap:wrap;
+
+align-items:center;
+
+gap:10px;
+
+margin-top:16px;
+
+
+}
+
+.stars{
+
+
+color:#f5b301;
+
+font-size:1.2rem;
+
+
+}
+
+.profile-details{
+
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:20px;
+
+margin-top:18px;
+
+
+}
+
+/* =====================================================
+SEÇÕES GERAIS
+Perfil Prestador e Usuário
+===================================================== */
+
+section{
+
+
+margin-bottom:24px;
+
+}
+
+section h2{
+
+
+margin-bottom:16px;
+
+font-size:1.5rem;
+
+}
+
+/* =====================================================
+TAGS
+Serviços, Áreas de Atuação, Pagamentos
+===================================================== */
+
+.tags{
+
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:12px;
+
+}
+
+.tags span{
+
+
+padding:12px 18px;
+
+border-radius:999px;
+
+background:#f3f4f6;
+
+font-weight:500;
+
+transition:.2s;
+
+
+}
+
+.tags span:hover
+
+/* =====================================================
+BOTÕES DE CONTATO
+Perfil Prestador
+===================================================== */
+
+.actions{
+
+
+display:flex;
+
+flex-direction:column;
+
+gap:12px;
+
+
+}
+
+.btn-primary,
+.btn-whatsapp{
+
+
+border:none;
+
+padding:16px;
+
+border-radius:16px;
+
+font-size:1rem;
+
+cursor:pointer;
+
+transition:.2s;
+
+
+}
+
+.btn-primary{
+
+
+background:var(--primary);
+
+color:white;
+
+
+}
+
+.btn-primary:hover{
+background:var(--primary-hover);
+}
+
+.btn-whatsapp{
+
+
+background:var(--success);
+
+color:white;
+
+}
+
+.btn-whatsapp:hover{
+filter:brightness(.95);
+}
+
+/* =====================================================
+TELA 3 - PERFIL DO USUÁRIO
+===================================================== */
+
+.profile-banner{
+
+
+background:var(--surface);
+
+border-radius:24px;
+
+padding:32px 24px;
+
+text-align:center;
+
+margin-bottom:24px;
+
+box-shadow:var(--shadow);
+
+
+}
+
+.profile-banner h1{
+
+margin-top:18px;
+
+margin-bottom:8px;
+
+
+}
+
+.member-since{
+
+color:var(--text-secondary);
+
+margin-bottom:16px;
+
+
+}
+
+/* =====================================================
+AVATAR DO USUÁRIO
+===================================================== */
+
+.avatar{
+width:130px;
+
+height:130px;
+
+margin:auto;
+
+border-radius:50%;
+
+background:
+    linear-gradient(
+        135deg,
+        #0a0a23,
+        #374151
+    );
+
+color:white;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:2.8rem;
+
+font-weight:700;
+
+
+}
+
+/* =====================================================
+CARTÕES DE INFORMAÇÃO
+Perfil do Usuário
+===================================================== */
+
+.info-card{
+
+
+background:var(--surface);
+
+border-radius:20px;
+
+padding:24px;
+
+margin-bottom:24px;
+
+box-shadow:var(--shadow);
+
+
+}
+
+.info-card h2{
+margin-bottom:20px;
+}
+
+.info-item{
+
+
+padding:16px 0;
+
+border-bottom:
+    1px solid var(--border);
+
+
+}
+
+.info-item:last-child{
+border-bottom:none;
+}
+
+.info-item strong{
+
+
+display:block;
+
+margin-bottom:4px;
+
+color:var(--text-secondary);
+
+}
+
+/* =====================================================
+GALERIA DE FOTOS
+Perfil Prestador e Usuário
+===================================================== */
+
+.gallery{
+
+
+display:grid;
+
+grid-template-columns:
+    repeat(2,1fr);
+
+gap:14px;
+
+}
+
+.gallery img{
+
+
+aspect-ratio:1/1;
+
+object-fit:cover;
+
+border-radius:16px;
+
+transition:.3s;
+
+
+}
+
+.gallery img:hover{
+
+
+transform:scale(1.03);
+
+}
+
+/* =====================================================
+TABLET
+===================================================== */
+
+@media (min-width:768px){
+
+
+.container{
+
+    max-width:1000px;
+
+    margin:auto;
+}
+
+.filter-grid{
+    grid-template-columns:
+        repeat(3,1fr);
+}
+
+.providers{
+    grid-template-columns:
+        repeat(2,1fr);
+}
+
+.gallery{
+    grid-template-columns:
+        repeat(3,1fr);
+}
+
+.actions{
+    flex-direction:row;
+}
+
+.actions button{
+    flex:1;
+}
+
+
+}
+
+/* =====================================================
+DESKTOP
+===================================================== */
+
+@media (min-width:1200px){
+
+.providers{
+    grid-template-columns:
+        repeat(3,1fr);
+}
+
+.container{
+    max-width:1200px;
+}
+
+.profile-header,
+.profile-banner,
+.info-card{
+
+    padding:32px;
+}
+
+
+}
